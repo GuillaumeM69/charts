@@ -248,6 +248,8 @@ acme:
   ## Configure dnsProvider to perform domain verification using dns challenge
   ## Applicable only if using the dns-01 challenge type
   delayBeforeCheck: 0
+  ## Disable the DNS propagation checks before notifying ACME that the DNS challenge is ready. [not recommended] (Default: false) 
+  disablepropagationcheck: false
   resolvers: []
     # - 1.1.1.1:53
     # - 8.8.8.8:53
