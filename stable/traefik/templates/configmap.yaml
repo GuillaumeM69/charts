@@ -326,6 +326,9 @@ data:
       {{- if .Values.acme.delayBeforeCheck }}
       delayBeforeCheck = {{ .Values.acme.delayBeforeCheck }}
       {{- end }}
+      {{- if .Values.acme.disablepropagationcheck }}
+      disablepropagationcheck = {{ .Values.acme.disablepropagationcheck }}
+      {{- end }}
     {{- else if eq .Values.acme.challengeType "http-01" }}
       [acme.httpChallenge]
       entryPoint = {{ .Values.acme.httpChallenge.entrypoint | quote }}
